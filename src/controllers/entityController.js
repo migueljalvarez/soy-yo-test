@@ -7,7 +7,7 @@ const filter = async (req, res) => {
     res.json(responde);
   } catch (error) {
     const { status, message } = error;
-    res.status(status).json({ Error: message });
+    res.status(status || error.response.status).json({ Error: message });
   }
 };
 

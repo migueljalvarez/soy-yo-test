@@ -69,3 +69,12 @@ En caso de error mostrara los siguientes mensajes de error:
     "Error": "Request failed with status code 403"
 }
 ```
+### Como usar con Docker
+
+```
+docker build -t co.com.soyyo.entity.filter-dev-1_0_0 .
+```
+
+```
+docker run docker.io/library/co.com.soyyo.entity.filter-dev-1_0_0 -p <puerto>:3000
+```

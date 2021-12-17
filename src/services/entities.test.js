@@ -17,4 +17,12 @@ describe("Evalua la respuesta del servicio", () => {
       expect(error.message).toEqual("Error en validación datos de entrada");
     }
   });
+
+  test("Responde con un error cuando alguno de los atributos no tiene información relacionada", async () => {
+    try {
+      await filter(19, 20);
+    } catch (error) {
+      expect(error.message).toEqual("Error no se encuentra para rango especificado");
+    }
+  });
 });
